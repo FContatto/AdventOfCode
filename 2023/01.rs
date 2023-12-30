@@ -34,12 +34,12 @@ fn get_number(input_s: String, question_2: bool)->u32{
         }
     }
     let number = first_digit*10+second_digit;
-    return number;
+    number
 }
 
 
 fn main() {
-    let file = File::open("src\\input.txt").expect("read");
+    let file = File::open("src\\input.txt").expect("Failed to read file.");
     let solve_question_2 = true;
     let mut sum = 0;
     let reader = BufReader::new(file);
